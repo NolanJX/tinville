@@ -1,0 +1,32 @@
+[project]
+name = "tinville"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+# Ruff uses the minimum of this range as its target-version — https://docs.astral.sh/ruff/settings/#target-version
+# ty uses the minimum of this range as its python-version — https://docs.astral.sh/ty/python-version/
+requires-python = ">=3.10"
+dependencies = []
+
+[dependency-groups]
+dev = [
+    "pre-commit>=4.6.1",
+    "ruff>=0.16.0",
+    "ty==0.0.63",  # keep in sync with the `rev` of ty in .pre-commit-config.yaml
+]
+
+[tool.ruff.lint]
+select = [
+    # pycodestyle
+    "E",
+    # Pyflakes
+    "F",
+    # pyupgrade
+    "UP",
+    # flake8-bugbear
+    "B",
+    # flake8-simplify
+    "SIM",
+    # isort
+    "I",
+]
